@@ -2,18 +2,16 @@
 
 def main ():
     
-    answer = input(":( or :)? ")
+    answer = input("Happy or Sad?")
 
     converted_answer = convert(answer)
 
     print (converted_answer)
 
 
-
-
 def convert(text):
-    text = text.replace(":)", "🙂")
-    text = text.replace(":(", "🙁")
+    text = text.replace(":)", "🙂").replace("=)", "🙂")
+    text = text.replace(":(", "🙁").replace("=(", "🙁")
     return text
 
   
