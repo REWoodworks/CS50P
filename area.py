@@ -9,6 +9,12 @@
 
 #main()
 
+def main():
+    house = area(50, 20)
+    yard = area(50, 50)
+    total = house + yard
+    print("Total area: " + str(total) + " square feet")
+
 
 
 def area(length, width):
@@ -19,13 +25,6 @@ def area(length, width):
     print(str(length * width) + " square feet")
     #return ends the function immediately, so any code after it will not be executed (line 17 will not work, hence the underlined print 
 
-    
-
-def main():
-    house = area(50, 20)
-    yard = area(50, 50)
-    total = house + yard
-    print("Total area: " + str(total) + " square feet")
 
 
 main()
