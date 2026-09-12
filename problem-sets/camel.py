@@ -25,19 +25,19 @@
 #### SECOND SOLUTION, stores each loop pass into a variable a variable and prints it at the end.
 # def main():
 #     camel_case = input("What is the variable name in camelCase?")
-
+#
 #     snake_case = ("")
-
+#
 #     for letter in camel_case:
-
+#
 #         if letter.islower():
 #             snake_case = snake_case + letter
 #         elif letter.isupper():
 #             letter = ("_" + letter.lower())
 #             snake_case = snake_case + letter
-
+#
 #     print(snake_case)
-
+#
 # main ()
     
 
