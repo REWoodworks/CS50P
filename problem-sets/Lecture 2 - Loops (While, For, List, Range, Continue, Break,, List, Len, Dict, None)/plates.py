@@ -48,6 +48,10 @@ def is_valid(plate):
 
             # From the first digit onward, everything must be digits.
             return plate[position:].isdigit()
+            # if plate[position:].isdigit():
+            #    return True
+            # else:
+            #    return False
 
     # No digits were found, and all earlier checks passed.
     return True
