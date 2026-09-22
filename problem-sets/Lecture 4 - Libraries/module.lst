@@ -1,0 +1,89 @@
+
+Please wait a moment while I gather a list of all available modules...
+
+30fcd23745efe32ce681__mypyc _statistics         ensurepip           quopri
+__future__          _string             enum                random
+__hello__           _strptime           errno               re
+__phello__          _struct             faulthandler        readline
+_abc                _suggestions        fcntl               reprlib
+_aix_support        _symtable           fd7dcdb10166ebd4db98__mypyc requests
+_android_support    _sysconfig          filecmp             resource
+_apple_support      _sysconfigdata__darwin_darwin fileinput           rlcompleter
+_ast                _testbuffer         fnmatch             runpy
+_ast_unparse        _testcapi           fractions           sched
+_asyncio            _testclinic         ftplib              secrets
+_bisect             _testclinic_limited functools           select
+_black_version      _testimportmultiple gc                  selectors
+_blake2             _testinternalcapi   genericpath         shelve
+_bz2                _testlimitedcapi    getopt              shlex
+_codecs             _testmultiphase     getpass             shutil
+_codecs_cn          _testsinglephase    gettext             signal
+_codecs_hk          _thread             glob                site
+_codecs_iso2022     _threading_local    graphlib            sitecustomize
+_codecs_jp          _tokenize           grp                 smtplib
+_codecs_kr          _tracemalloc        gzip                socket
+_codecs_tw          _types              hashlib             socketserver
+_collections        _typing             heapq               sqlite3
+_collections_abc    _uuid               hmac                sre_compile
+_colorize           _warnings           html                sre_constants
+_compat_pickle      _weakref            http                sre_parse
+_contextvars        _weakrefset         idlelib             ssl
+_csv                _xxtestfuzz         idna                stat
+_ctypes             _zoneinfo           imaplib             statistics
+_ctypes_test        _zstd               importlib           string
+_curses             abc                 inspect             stringprep
+_curses_panel       annotationlib       io                  struct
+_datetime           antigravity         ipaddress           subprocess
+_dbm                argparse            itertools           symtable
+_decimal            array               json                sys
+_elementtree        ast                 keyword             sysconfig
+_functools          asyncio             linecache           syslog
+_hashlib            atexit              locale              tabnanny
+_heapq              base64              logging             tarfile
+_hmac               bdb                 lzma                tempfile
+_imp                binascii            mailbox             termios
+_interpchannels     bisect              marshal             test
+_interpqueues       black               math                textwrap
+_interpreters       blackd              mimetypes           this
+_io                 blib2to3            mmap                threading
+_ios_support        builtins            modulefinder        time
+_json               bz2                 multiprocessing     timeit
+_locale             cProfile            mypy_extensions     tkinter
+_lsprof             calendar            netrc               token
+_lzma               certifi             ntpath              tokenize
+_markupbase         charset_normalizer  nturl2path          tomllib
+_md5                click               numbers             trace
+_multibytecodec     cmath               opcode              traceback
+_multiprocessing    cmd                 operator            tracemalloc
+_opcode             code                optparse            tty
+_opcode_metadata    codecs              os                  turtle
+_operator           codeop              packaging           turtledemo
+_osx_support        collections         pathlib             types
+_pickle             colorsys            pathspec            typing
+_posixshmem         compileall          pdb                 unicodedata
+_posixsubprocess    compression         pickle              unittest
+_py_abc             concurrent          pickletools         urllib
+_py_warnings        configparser        pip                 urllib3
+_pydatetime         contextlib          pkgutil             uuid
+_pydecimal          contextvars         platform            venv
+_pyio               copy                platformdirs        warnings
+_pylong             copyreg             plistlib            wave
+_pyrepl             cowsay              poplib              weakref
+_queue              csv                 posix               webbrowser
+_random             ctypes              posixpath           wsgiref
+_remote_debugging   curses              pprint              xml
+_scproxy            dataclasses         profile             xmlrpc
+_sha1               datetime            pstats              xxlimited
+_sha2               dbm                 pty                 xxlimited_35
+_sha3               decimal             pwd                 xxsubtype
+_signal             difflib             py_compile          zipapp
+_sitebuiltins       dis                 pyclbr              zipfile
+_socket             doctest             pydoc               zipimport
+_sqlite3            email               pydoc_data          zlib
+_sre                emoji               pyexpat             zoneinfo
+_ssl                emojize             pytokens            
+_stat               encodings           queue               
+
+Enter any module name to get more help.  Or, type "modules spam" to search
+for modules whose name or summary contain the string "spam".
+

@@ -8,3 +8,5 @@ Check the /Users/russellworley/Code/CS50P/lecture_shorts folder for examples of 
 Answer in short form.
 
 Our goal is clear, concise code at my current level.
+
+Finally, every session should end with ammendments to /Users/russellworley/Obsidian Vaults/Sync Vault/ERROR JOURNAL.md
