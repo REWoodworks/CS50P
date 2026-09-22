@@ -4,6 +4,7 @@
 
 # If, though, X or Y is not an integer, X is greater than Y, or Y is 0, instead prompt the user again. (It is not necessary for Y to be 4.) Be sure to catch any exceptions like ValueError or ZeroDivisionError.
 
+
 def main():
     print("Input your gas tank as a fraction X/Y")
 
@@ -12,30 +13,32 @@ def main():
             x, y = (input("What is your fraction?")).split("/")
             x = int(x)
             y = int(y)
-            fuel =  x / y
-        except ValueError:                              #handles ALL non integer entries ie call words and malformed fraction entry
-            print ("Numbers must be integers.")
-        except ZeroDivisionError:                       #handles zero division
-            print ("Y must not be zero")
+            fuel = x / y
+        except (
+            ValueError
+        ):  # handles ALL non integer entries ie call words and malformed fraction entry
+            print("Numbers must be integers.")
+        except ZeroDivisionError:  # handles zero division
+            print("Y must not be zero")
         else:
-            if x >= 0 and y > 0 and not x > y:          #confirms all remaining conditions!!!
+            if x >= 0 and y > 0 and not x > y:  # confirms all remaining conditions!!!
                 break
             elif x < 0:
-                print ("x must be greater than or equal to zero")
+                print("x must be greater than or equal to zero")
             elif y <= 0:
-                print ("y must be greater than 0")
+                print("y must be greater than 0")
             elif x > y:
-                print ("x must not be greater than y")
+                print("x must not be greater than y")
 
+    if fuel >= (99 / 100):
+        print("F")
 
-    if fuel >= (99/100):
-            print ("F")
-
-    elif (1/100) < fuel < (99/100):
-            print (f"{fuel:.0%}")
+    elif (1 / 100) < fuel < (99 / 100):
+        print(f"{fuel:.0%}")
 
     else:
-            fuel <= (1/100)
-            print ("E")
+        fuel <= (1 / 100)
+        print("E")
+
 
 main()

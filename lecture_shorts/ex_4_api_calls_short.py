@@ -2,8 +2,6 @@
 # Review compilation: each complete lecture version is preserved in sequence.
 # Running this combined file would run every version, so it is intended for review.
 
-
-# -----------------------------------------------------------------------------
 # Version 0 - api0.py
 # Establishes the basic API workflow: make a GET request, convert the JSON
 # response into Python data, and print the complete result.
@@ -78,7 +76,8 @@ def main():
 
     try:
         response = requests.get(
-            "https://api.artic.edu/api/v1/artworks/search", {"q": artist}
+            "https://api.artic.edu/api/v1/artworks/search",
+            {"q": artist}
         )
         response.raise_for_status()
     except requests.HTTPError:

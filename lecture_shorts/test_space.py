@@ -1,25 +1,25 @@
-print ("Please enter a value where x < y")
 
-while True:
-	print ("beginning of loop")
-    
-	try:
-		print ("X and Y must both be integers")
-		x, y = (input("Please enter X/Y ").split("/"))
-		x = int(x)
-		y = int(y)
-		if x < 0:
-					print ("iffy")
+import sys
+import requests
 
-	except ValueError:
-		print("Bad Value")
-		# x = int(x) removed, exception should restate then restart loop
-		# y = int(y) this setup would cause a retry of the error causing function
 
-	except NameError:
-		print("No cats allowed")
-		continue
-	
-	else:
-		print ("else/break")
-		break	
+def main():
+    print("Search the Art Institute of Chicago!")
+    artist = input("Artist: ")
+
+    try:
+        response = requests.get(
+            "https://api.artic.edu/api/v1/artworks/search", 
+            {"q": artist, "limit": 10}
+        )
+        response.raise_for_status()
+    except requests.HTTPError:
+        print("Couldn't complete request!")
+        sys.exit(1)
+
+    content = response.json()
+    for artwork in content["data"]:
+        print(f"* {artwork['title']}")
+
+
+main()
