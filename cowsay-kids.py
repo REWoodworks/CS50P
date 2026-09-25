@@ -7,7 +7,8 @@
 # len(cowsay.chars)
 # 19
 
-# Want to add a path to make it random, to use the dict called by 
+# add path for random
+# add conditional to take an arg 
 
 
 
@@ -30,4 +31,5 @@ def main():
         sys.exit
 
 main ()
+
     
