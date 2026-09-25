@@ -11,15 +11,70 @@ import random
 
 
 def main():
-    ...
+    
+
+    level = get_level()
+
+    score = 0
+
+    for _ in range(10):
+        x = generate_integer(level)
+        y = generate_integer(level)
+
+      
+        i = 0
+        while i < 3:
+            #try should handle the only risk and let the if conditionals take care of the rest.  moving answer aq. into try and if out
+            try:
+                answer = int(input(f"{x} + {y} = "))
+            except ValueError:
+                print("EEE")
+                i += 1    
+                continue
+            if answer != x + y:
+                print("EEE")
+                i += 1
+            else:
+                score = score + 1
+                break
+        # overcomplicated check loop....didn't think of simple ending. what happens after while loop, and while only completed at 3. Add the print on line below BUT IN A CONDITIONAL
+        if i == 3:
+            print(f"{x} + {y} = {x+y}")
+
+    print(f"Score: {score} / 10")
 
 
 def get_level():
-    ...
+
+    while True:
+        try:
+            prompt = int(input("Level 1-3: "))
+        except ValueError:
+            print("Please enter a number 1-3")
+            continue
+            # had to add a continue to cycle the loop
+        if not 1 <= prompt <= 3:
+            print("Please enter a number 1-3")
+        else:
+            break
+    return prompt
+    # initially returned "get_level", should return "prompt"
 
 
 def generate_integer(level):
-    ...
+    # completely restructured section due to requirements, wildly overthought the function.  main can take a random and assign to x, then to y. hence the direction, r"eturn a single"
+
+    if level == 1:
+        rando_int = random.randint(0, 9)
+    elif level == 2:
+        rando_int = random.randint(10, 99)
+    elif level == 3:
+        rando_int = random.randint(100, 999)
+    else: 
+        raise ValueError
+         # raising an error, no idea why.  Its per spec
+
+    return rando_int    
 
 
 if __name__ == "__main__":
