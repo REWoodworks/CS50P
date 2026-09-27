@@ -1,3 +1,4 @@
+# %% [markdown]
 # Bitcoin is a form of digital currency, otherwise known as cryptocurrency. Rather than rely on a central authority like a bank, Bitcoin instead relies on a distributed network, otherwise known as a blockchain, to record transactions.
 
 # Because there’s demand for Bitcoin (i.e., users want it), users are willing to buy it, as by exchanging one currency (e.g., USD) for Bitcoin.
@@ -14,11 +15,16 @@
 #     ...
 # Outputs the current cost of 𝑛 Bitcoins in USD to four decimal places, using , as a thousands separator.
 
+#%%
 import sys
 import requests
-
+#import os
+#from dotenv import load_dotenv
 
 def main():
+
+    #load_dotenv()
+    #api_key = os.getenv("COINCAP_API_KEY")
 
     if len(sys.argv) < 2:
         sys.exit("please enter a number")
@@ -30,25 +36,30 @@ def main():
 
     try:
         response = requests.get(
-            "https://rest.coincap.io/v3/assets/bitcoin?apiKey=66a0f926a80b44c5d988f9a0e0d72b8fd5cddfd2a333dde7d3b74113e74c615b"
+            "https://rest.coincap.io/v3/assets/bitcoin?apiKey=cd511ac50955f3f48c5980bb9a937f52a0bb4c6278260a97d876f54dc5347603"
+        #    params={"apiKey": api_key},
+        #    timeout=10,
         )
+        #print(response.status_code)
+        #print(response.text)
 
     except requests.RequestException:
         sys.exit("Request exception")
         # print(type(response))
         # print(type(datadict))
-
-    # this entire section is overkill and not required by the projeect,  A keyerror returns here because after 5 calls in a minute, the type assigned to datadict is not a dictionary, though it is a json file.  When the code tries to run a dict function on itm the keys arent there and the key error id returned.
+#%%[markdown]
+    # this entire section is overkill and not required by the projeect,  A keyerror returns here because after 5 calls in a minute, the type assigned to datadict is not a dictionary, though it is a json file.  When the code tries to run a dict function on itm the keys arent there and the key error id returned.  It isn't specifically about over useage...
     #
+
     try:
         datadict = response.json()
         price = float(datadict["data"]["priceUsd"])
     except KeyError:
-        sys.exit("Too many attempts, wait one minute")
+        sys.exit("Returned data doesn't include key")
 
     print(f"{price * coin:,.4f}")
-
-    # CHECKING a JSON return
+#%%[markdown]
+    # CHECKING a JSON for return
     # response = requests.get (some api)
     # data = response.json()
     # json.dumps(data, indent=2)
