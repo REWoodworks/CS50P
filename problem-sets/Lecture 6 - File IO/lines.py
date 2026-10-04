@@ -2,20 +2,6 @@
 
 # Assume that any line that starts with #, optionally preceded by whitespace, is a comment. (A docstring should not be considered a comment.) Assume that any line that only contains whitespace is blank.
 
-#  1)check arguments entered at CL
-#     a) 1 argument only
-#     b) is file there
-#     b) ends in .py
-
-# 1a) establish a var = 0
-# 2) open File
-# 3) assign lines to a var
-# 3a) for line in lines....
-# 3b) strip lines
-# 3c) read lines
-# 4) refuse to count anything with # or blank
-# 5) count all else
-# 6) print count var
 
 import sys
 
@@ -23,14 +9,10 @@ def main():
 
     count = 0
 
-    if len(sys.argv) == 2:
-        file = sys.argv[1]
-        
-        if not file.endswith(".py"):
-            sys.exit("not a python file")
-        
-    else:
-         sys.exit("Enter one argument only")
+    if len(sys.argv) != 2:
+        sys.exit("Enter one argument only")
+    if not sys.argv[1].endswith(".py"):
+        sys.exit("not a python file")
         
     try:
         with open(sys.argv[1]) as file:
